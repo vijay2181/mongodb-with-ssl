@@ -82,7 +82,7 @@ We can specify alternate path for data and log directory by modifying /etc/mongo
 ## check MongoDB service status
 ![image](https://user-images.githubusercontent.com/66196388/184007361-e08d7faa-42f4-4aa0-a94c-4f130576f6e7.png)
 
-Press mongo to enter into mongo shell
+Enter 'mongo' on CLI to get into mongodb shell
 
 ![image](https://user-images.githubusercontent.com/66196388/184007854-6e756b31-ace4-4adb-a297-9eb4e749d6b2.png)
 
@@ -90,8 +90,8 @@ Press mongo to enter into mongo shell
 
 >db.createUser(
       {
-          user: "vijay",
-          pwd: "vijay",
+          user: "vijayDB",
+          pwd: "vijayDB",
           roles: [ "root" ]
       }
   )
@@ -101,14 +101,18 @@ Press mongo to enter into mongo shell
 
 >exit
 
-mongo -u vijayDB -p --authenticationDatabase "admin"     -- asks password in commandline
+```bash
+mongo -u vijayDB -p --authenticationDatabase "admin" 
+
+```
+ -- asks password in commandline
 
 >show dbs
 
 ![image](https://user-images.githubusercontent.com/66196388/184008968-65d1c7ef-b68d-432d-8e51-3cac89c5dc0e.png)
 
 
->Now we connected to Local Mongodb directly without Security, so we need to Connect it Securily
+>Now we connected to Local Mongodb directly without Security, so we need to Connect it Securely
 
 ## Secure your MongoDB connections - SSL/TLS
 
